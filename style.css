@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:lexend;
+    font-weight:bolder;
+}
+@font-face{
+    font-family:lexend;
+    src:url(fonts/LexendDeca-VariableFont_wght.ttf);
+}
+body{
+    background-color:#0a0c1b;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+}
+/*Wrapper designing begins here*/
+.wrapper{
+    width:70%;
+    background-color:#1c1938;
+    display:flex;
+    justify-content:space-between;
+    border-radius:15px;
+    animation:zoomIn 1.7s;
+}
+.wrapper .info{
+    width:45%;
+    padding:35px 35px;
+}
+.wrapper .info h2{
+    font-size:30px;
+    margin-bottom:5%;
+}
+.wrapper .info .para{
+    font-size:15px;
+    margin-bottom:15%;
+}
+.wrapper .info .numbers{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+/*Wrapper designing ends here*/
+/*Image designing begins here*/
+.wrapper .image{
+    width:50%;
+    background-image:url(images/image-header-desktop.jpg);
+    background-size:cover;
+    position:relative;
+}
+.wrapper .image .layer{
+    width:100%;
+    height:100%;
+    background-color:#7d44a2;
+    opacity:0.5;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.wrapper .image, .wrapper .image .layer{
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+/*Image designing ends here*/
+/*Responsive design starts here*/
+@media only screen and (max-width:1100px){
+    .wrapper{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+    .wrapper .info{
+        width:100%;
+    }
+    .wrapper .image{
+        width:100%;
+        height:70vh;
+        background-repeat:no-repeat;
+        background-image:url(images/image-header-mobile.jpg);
+    }
+    .wrapper .image ,.wrapper .image .layer{
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-right-radius:0;
+    }
+    .wrapper .info .numbers{
+        height:35vh;
+        justify-content:center space-between;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+        font-size:25px;
+    }
+    body{
+        padding:600px 0px;
+    }
+}
+/*Responsive design ends here*/
